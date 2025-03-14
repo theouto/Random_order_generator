@@ -11,10 +11,11 @@ int main()
     cin >> bottom;
     cout << "Enter the ceiling: ";
     cin >> ceiling;
+    ceiling++;
     vector<int> blacklist;
-    for (int j = 0; j < ceiling-bottom+1; j)
+    for (int j = 0; j < ceiling-bottom; j)
     {
-        int rando = rand() % ceiling + bottom;
+        int rando = rand() % (ceiling-bottom) + bottom;
         for (auto& c : blacklist)
         {
             if (rando == c)
